@@ -10,7 +10,7 @@ wheels/
 .venv
 
 #aux
-*.txt
+# *.txt
 
 #models
 *.pt
@@ -18,7 +18,7 @@ wheels/
 
 #images
 *.png
-
+# *.jpg
 *.jpeg
 *.gif
 *.bmp

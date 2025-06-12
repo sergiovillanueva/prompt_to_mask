@@ -1,0 +1,4 @@
+pip install uv
+uv pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+uv pip install transformers accelerate opencv-python matplotlib huggingface_hub[hf_xet] qwen-vl-utils ipykernel ipywidgets
+
