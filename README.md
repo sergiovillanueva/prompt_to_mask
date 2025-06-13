@@ -92,22 +92,6 @@ prompt_to_mask/
 
 ---
 
-## Ejemplos de Uso
-
-### Prompts de Ejemplo
-- `"yellow car"` → Detecta únicamente coches amarillos
-- `"cars but not the yellow ones"` → Excluye coches amarillos específicamente
-- `"woman walking"` → Identifica personas en movimiento
-- `"kiwi, orange"` → Detecta múltiples tipos de frutas
-
-### Resultados Esperados
-1. **Detección precisa** de objetos según descripción textual
-2. **Máscaras de segmentación** a nivel de píxel  
-3. **Filtrado inteligente** basado en criterios complejos
-4. **Procesamiento eficiente** mediante técnicas de batching
-
----
-
 ## Fundamentos Teóricos
 - **Zero-shot Learning**: Capacidad de generalización sin entrenamiento específico
 - **IA Multimodal**: Integración de modalidades visuales y textuales  
