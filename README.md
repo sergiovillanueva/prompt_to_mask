@@ -72,7 +72,7 @@ Conversación Natural → Qwen2.5-VL → JSON Estructurado → SAM → Máscaras
 ### Requisitos del Sistema
 - **GPU**: Compatible con CUDA (recomendado)
 - **RAM**: Mínimo 16GB
-- **Almacenamiento**: Aproximadamente 20GB para modelos
+- **Almacenamiento**: Aproximadamente 15GB para modelos
 
 ### Instalación
 ```bash
