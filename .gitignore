@@ -11,7 +11,7 @@ wheels/
 
 #aux
 # *.txt
-
+*.pdf
 #models
 *.pt
 *.pth
