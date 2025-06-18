@@ -1,13 +1,13 @@
 # De Prompt a Máscara: Segmentación Inteligente con la librería Transformers
 
-<div align="center">
+<div style="display: flex; align-items: center; gap: 20px;">
   <img src="assets/logo_etse.jpg" alt="ETSE-UV Logo" width="200"/>
+  <div>
+    <h2>ETSE-UV</h2>
+    <p><strong>Autor:</strong> Sergio Villanueva López<br>
+    <strong>Contacto:</strong> s.villanuevalopez@gmail.com</p>
+  </div>
 </div>
-
-## ETSE-UV
-
-**Autor:** Sergio Villanueva López  
-**Contacto:** s.villanuevalopez@gmail.com
 
 ---
 
