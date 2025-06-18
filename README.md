@@ -1,100 +1,103 @@
-# De Prompt a Máscara: Segmentación Inteligente con Transformers
+# De Prompt a Máscara: Segmentación Inteligente con la librería Transformers
 
-## Seminario UV - Visión Artificial Avanzada
+<div align="center">
+  <img src="assets/logo_etse.jpg" alt="ETSE-UV Logo" width="200"/>
+</div>
 
-Este seminario práctico explora cómo **convertir descripciones en texto natural en máscaras de segmentación precisas** utilizando la librería **Transformers de Hugging Face**.
+## ETSE-UV
 
----
-
-## Objetivos del Seminario
-
-- **Modelos multimodales**: Comprensión de la combinación entre visión y lenguaje natural
-- **Transformers en práctica**: Uso profesional de la librería líder en IA
-- **Segmentación zero-shot**: Detección de objetos sin necesidad de entrenar modelos
-- **Optimización**: Gestión de modelos en local y procesamiento en lotes
-- **Pipelines de IA**: Integración de múltiples modelos para tareas complejas
+**Autor:** Sergio Villanueva López  
+**Contacto:** s.villanuevalopez@gmail.com
 
 ---
 
-## Tecnologías Utilizadas
+## Descripción del Proyecto
 
-### Librerías Principales
-- **Transformers**: Framework principal para modelos preentrenados
-- **PyTorch**: Backend de deep learning
-- **PIL/OpenCV**: Procesamiento de imágenes
-- **Matplotlib**: Visualización de resultados
+Este proyecto implementa dos enfoques distintos para **segmentación semántica guiada por texto** utilizando modelos de inteligencia artificial preentrenados. El objetivo es convertir descripciones en lenguaje natural en máscaras de segmentación precisas a nivel de píxel.
 
-### Modelos de IA
-- **Grounding DINO**: Detección de objetos guiada por texto
-- **SAM (Segment Anything Model)**: Segmentación precisa a nivel píxel  
+## Metodologías Implementadas
+
+### Enfoque Clásico: Pipeline Multi-Modelo
+**Archivo:** `1_GD_SAM.ipynb`
+
+```
+Texto → Grounding DINO → Bounding Boxes → SAM → Máscaras
+```
+
+**Modelos utilizados:**
 - **CLIP**: Clasificación imagen-texto zero-shot
 - **BLIP**: Generación automática de descripciones
-- **Qwen2.5-VL**: Modelo conversacional multimodal
+- **Grounding DINO**: Detección de objetos guiada por texto  
+- **SAM**: Segmentación precisa a nivel píxel
 
----
+**Características:**
+- Pipeline modular con modelos especializados
+- Mayor precisión en tareas específicas
+- Control granular sobre cada etapa del proceso
 
-## Contenido del Seminario
-
-### Notebook 1: `GD_SAM.ipynb` - Enfoque Clásico
-**Pipeline de múltiples modelos especializados**
-
-```
-Texto → Grounding DINO → Bounding Boxes → SAM → Máscaras Precisas
-         ↓
-    CLIP + BLIP (análisis adicional)
-```
-
-**Contenido:**
-- Configuración y descarga de modelos en local
-- CLIP para clasificación imagen-texto
-- BLIP para generación de descripciones  
-- Grounding DINO para detección guiada por texto
-- SAM para segmentación pixel-perfect
-- Integración completa del pipeline
-
-### Notebook 2: `QWEN_SAM.ipynb` - Enfoque Moderno
-**Pipeline conversacional simplificado**
+### Enfoque Moderno: IA Conversacional
+**Archivo:** `2_QWEN_SAM.ipynb`
 
 ```
 Conversación Natural → Qwen2.5-VL → JSON Estructurado → SAM → Máscaras
 ```
 
-**Ventajas del enfoque moderno:**
-- **Menor complejidad**: 2 modelos vs 4 del enfoque clásico
-- **Mayor inteligencia**: Comprensión de instrucciones complejas
-- **Interfaz conversacional**: Interacción natural en lenguaje humano
-- **Salida estructurada**: Formato JSON automático
+**Modelos utilizados:**
+- **Qwen2.5-VL-3B**: Modelo multimodal conversacional
+- **SAM**: Segmentación precisa a nivel píxel
 
----
+**Ventajas:**
+- Comprensión de instrucciones complejas
+- Interfaz conversacional natural
+- Salida estructurada en formato JSON
 
-## Requisitos e Instalación
+## Casos de Uso Prácticos
 
-### Requisitos del Sistema
+- **Control de calidad industrial**: Detección de anomalías
+- **Análisis urbano**: Medición de superficies en imágenes satelitales
+- **Inventario automatizado**: Conteo y clasificación de objetos
+- **Análisis geoespacial**: Cálculo de perímetros y áreas
+
+## Requisitos Técnicos
+
+### Especificaciones del Sistema
+- **Plataforma**: Google Colab compatible
 - **GPU**: Compatible con CUDA (recomendado)
 - **RAM**: Mínimo 16GB
-- **Almacenamiento**: Aproximadamente 15GB para modelos
+- **Almacenamiento**: ~15GB para modelos preentrenados (opcional)
 
 ### Instalación
+
 ```bash
+# PyTorch con soporte CUDA
 pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+
+# Dependencias adicionales
 pip install transformers accelerate opencv-python matplotlib huggingface_hub[hf_xet] qwen-vl-utils ipykernel ipywidgets
 ```
 
-### Estructura del Proyecto
+## Estructura del Proyecto
+
 ```
 prompt_to_mask/
-├── GD_SAM.ipynb          # Enfoque clásico (múltiples modelos)
-├── QWEN_SAM.ipynb        # Enfoque moderno (modelo unificado)
-├── assets/               # Imágenes de ejemplo
-├── README.md             # Documentación
-└── how_to_install_local.txt
+├── 1_GD_SAM.ipynb          # Pipeline clásico multi-modelo
+├── 2_QWEN_SAM.ipynb        # Enfoque conversacional moderno
+├── assets/                 # Conjunto de imágenes de prueba
+│   ├── cars.jpg
+│   ├── fruits.jpg
+│   ├── park.jpg
+│   └── ...
+├── README.md
 ```
+
+## Fundamentos Teóricos
+
+- **Zero-shot Learning**: Capacidad de generalización sin entrenamiento específico
+- **IA Multimodal**: Integración de modalidades visuales y textuales
+- **Transformers**: Arquitectura neuronal basada en mecanismos de atención
+- **Segmentación Semántica**: Clasificación de píxeles por categorías semánticas
 
 ---
 
-## Fundamentos Teóricos
-- **Zero-shot Learning**: Capacidad de generalización sin entrenamiento específico
-- **IA Multimodal**: Integración de modalidades visuales y textuales  
-- **Ingeniería de Pipelines**: Conexión eficiente de modelos especializados
-- **Optimización Práctica**: Gestión local de modelos y técnicas de aceleración
+*Seminario de Visión Artificial - Universidad de Valencia*
 
