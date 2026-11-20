@@ -1,5 +1,7 @@
 # De Prompt a Máscara: Segmentación Inteligente con la librería Transformers
 
+[![Licencia: CC BY-NC-SA 4.0](https://img.shields.io/badge/Licencia-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
+
 <div style="display: flex; align-items: flex-start; gap: 20px;">
   <img src="assets/logo_etse.jpg" alt="ETSE-UV Logo" width="200"/>
   <div style="flex: 1;">
@@ -88,6 +90,7 @@ prompt_to_mask/
 │   ├── park.jpg
 │   └── ...
 ├── README.md
+└── LICENSE
 ```
 
 ## Fundamentos Teóricos
@@ -96,6 +99,10 @@ prompt_to_mask/
 - **IA Multimodal**: Integración de modalidades visuales y textuales
 - **Transformers**: Arquitectura neuronal basada en mecanismos de atención
 - **Segmentación Semántica**: Clasificación de píxeles por categorías semánticas
+
+## Licencia
+
+Material de Sergio Villanueva López bajo licencia [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es): puedes usarlo, compartirlo y adaptarlo sin fines comerciales, citando al autor y compartiendo lo que adaptes con la misma licencia. No se puede usar en cursos o formaciones de pago sin permiso. Las imágenes, datos y modelos de terceros mantienen sus licencias. Ver [LICENSE](LICENSE).
 
 ---
 
